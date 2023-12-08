@@ -1,0 +1,117 @@
+@import "../../theme/fonts.scss";
+@import "../../theme/variables.scss";
+
+.getpaid-popup-container {
+border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  justify-content: center;
+  background-color: $white;
+}
+.getpaid-popup-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+ 
+
+  p {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+.Todo {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+gap: 10px;
+  align-items: center;
+
+}
+.getpaid-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 5px;
+
+
+  border: 1px solid $border-color;
+
+  padding: 20px;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.blue {
+  color: $login-blue;
+  background-color: #E2EAFD;
+  border-radius: 5px;
+  padding: 0px 5px;
+  img {
+    color: $login-blue;
+    margin-right: 5px;
+
+  }
+  label{
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+
+}
+label {
+  font-weight: 100;
+}
+span {
+  font-weight: bold;
+  font-size: 12px;
+}
+.pop {
+  display: flex;
+  flex-direction: column;
+
+
+  gap: 10px;
+
+
+  
+
+}
+img{
+    color: $gray-sideBar;
+    margin-right: 5px;
+}
+.label{
+    color: gray;
+}
+.buttons{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.margin{
+  margin-bottom: 0px;
+}
+.notify{
+  width: 120px;
+}
+.edit-btn{
+  width: 120px;
+
+}
+.send{
+  width: 170px
+}
+.Cancel{
+  width:145px
+}
+

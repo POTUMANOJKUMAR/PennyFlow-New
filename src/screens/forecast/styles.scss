@@ -1,0 +1,84 @@
+@import "../../theme/fonts.scss";
+@import "../../theme/variables.scss";
+
+@mixin font-style($color, $size, $family, $weight, $lineHeight) {
+  color: $color;
+  font-size: $size;
+  font-family: $family;
+  font-weight: $weight;
+  // line-height: $lineHeight;
+}
+
+.formContainer {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px 7px 25px;
+    // background-color: red;
+    // border-bottom: 1px solid #CDCDCD;
+    .heading {
+      @include font-style(#111314, 20px, Poppins, 600, 0px);
+    }
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  hr {
+    background-color: #cdcdcd;
+  }
+  .mainForm {
+    form {
+      .formDetails {
+        display: flex;
+        flex-direction: column;
+        padding: 0 25px 0 25px;
+        margin-bottom: 15px;
+        label {
+          @include font-style(#2d3436, 14px, Poppins, 600, 28px);
+        }
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 25px 55px 25px;
+  }
+}
+
+.forecast-pie-chart-container {
+  display: flex;
+  flex-direction: column;
+  font-style: "Poppins";
+}
+
+.font {
+  color: #676767;
+}
+
+//size of the Doughnut
+.pie-chart-data {
+  height: 55px;
+  width: 55px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+
+  font-style: "Poppins";
+}
+.pie-chart-and-percentage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-style: "Poppins";
+}
+.container {
+  padding: 0;
+  margin-top: 18px;
+}

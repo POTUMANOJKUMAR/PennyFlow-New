@@ -1,0 +1,199 @@
+@import "../../theme/variables.scss";
+@import "../../theme/fonts.scss";
+
+.getpaid-main-container {
+  display: flex;
+}
+.getpaid-menu-container {
+  width: 70%;
+  display: flex;
+  border-bottom: 1px solid $border;
+}
+.getpaid-left-container {
+  width: 75%;
+  padding: 25px;
+}
+.getpaid-menu-main-container {
+  display: flex;
+  align-items: center;
+}
+.getpaid-right-container {
+  width: 25%;
+  height: 100vh;
+  background-color: #fff;
+
+  padding: 28px 10px 0px 15px;
+}
+.getpaid-menu-item {
+  font-family: "Poppins";
+  font-weight: 500;
+  padding: 0 30px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  color: #c0c0c0;
+  cursor: pointer;
+}
+.getpaid-active {
+  color: $login-blue;
+  border-bottom: 1px solid $login-blue;
+}
+.getpaid-filter {
+  width: 44px;
+  height: 44px;
+  border: 1px solid $login-blue;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter-icon {
+  width: 18px;
+  height: 11px;
+}
+
+.add-invoice-container {
+  width: 172px;
+  margin-left: 20px;
+}
+
+//right container styles
+
+.invoice-details-header {
+  font-size: 24px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+hr {
+  margin: 25px 10px;
+}
+.para {
+  .para-first {
+    font-size: 16px;
+    color: #878787;
+    font-family: "Poppins";
+  }
+  .para-second {
+    font-size: 10px;
+    color: #848484;
+    font-family: "Poppins";
+  }
+}
+.button-price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .price-container {
+    .total-amount {
+      font-size: 14px;
+      color: #878787;
+      font-family: "Poppins";
+    }
+    .total-price {
+      font-size: 18px;
+      font-weight: bold;
+      font-family: "Poppins";
+    }
+  }
+}
+.getpaid-popup-container {
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  justify-content: center;
+  background-color: $white;
+}
+.getpaid-popup-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  p {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+.Todo {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.getpaid-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 5px;
+
+  border: 1px solid $border-color;
+
+  padding: 20px;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.blue {
+  color: $login-blue;
+  background-color: #e2eafd;
+  border-radius: 5px;
+  padding: 0px 5px;
+  img {
+    color: $login-blue;
+    margin-right: 5px;
+  }
+  label {
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+label {
+  font-weight: 100;
+}
+span {
+  font-weight: bold;
+  font-size: 12px;
+}
+.pop {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+img {
+  color: $gray-sideBar;
+  margin-right: 5px;
+}
+.label {
+  color: gray;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.margin {
+  margin-bottom: 0px;
+}
+.notify {
+  width: 120px;
+}
+.edit-btn {
+  width: 120px;
+}
+.send {
+  width: 170px;
+}
+.Cancel {
+  width: 145px;
+}
