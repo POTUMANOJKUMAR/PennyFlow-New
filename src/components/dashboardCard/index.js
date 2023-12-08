@@ -7,7 +7,7 @@ import {
   ArcElement,
   LinearScale,
   BarElement,
-  LineElement,
+  LineElement,    
   PointElement,
   Title,
   Tooltip,
