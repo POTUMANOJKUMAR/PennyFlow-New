@@ -87,6 +87,10 @@ const routes = [
         screen: "Email",
         childPath: "/email-notification",
       },
+      {
+        screen: "Insight",
+        childPath: "/insight",
+      },
     ],
   },
 
