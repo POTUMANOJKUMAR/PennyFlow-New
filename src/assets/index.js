@@ -68,6 +68,14 @@ const Icons = {
   rentIcon:require("./icons/budgeting/rentcolor.png"),
 
   otherIcon:require("./icons/budgeting/othercolor.png"),
+  voilet:require("./icons/violet.png"),
+  lightpink:require("./icons/lightpink.png"),
+  aqua:require("./icons/aqua.png"),
+  rent:require("./icons/rent.png"),
+  taxes:require("./icons/taxes.png"),
+  internatiinal_bal:require("./icons/internal-balance.png"),
+  other:require("./icons/other.png"),
+  no_category:require("./icons/no-category.png"),
 };
 
 const Lottie = {};

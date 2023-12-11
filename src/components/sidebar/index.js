@@ -29,7 +29,7 @@ const Sidebar = () => {
       id: "3",
     },
     {
-      // to: "/main/badges",
+      to: "/main/insight",
       label: "Insights",
       Icon: assets.Icons.insights,
       ActiveIcon: assets.Icons.activeInsights,
@@ -62,8 +62,8 @@ const Sidebar = () => {
       Icon: assets.Icons.expenseCard,
       ActiveIcon: assets.Icons.activeExpenseCard,
       id: "8",
-    },
-  ]);
+    }
+  ])
 
   const [mainLinks, setMainLinks] = useState([]);
   const [showChatModal, setShowChatModal] = useState(false);
