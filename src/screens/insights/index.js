@@ -311,74 +311,69 @@ function Insight() {
                 </div>
             
               </div>
- <div className=" col bottom-right-bar-chart">
-                            <Bar
-                            
-                                data={{
-                                  labels: [
-                                    "No Category",
-                                    "Internal Balance",
-                                    "Deposit",
-                                    "Recived",
-                                   
-                                  ],
-                                    datasets: [
-                                        {
-                                        
-                                         
-                                            data: [
-                                                180000, 190000, 220000, 240000, 
-                                            ],
-                                            backgroundColor:["#B5DFFE","#B3FDAD","#FFE5A1","#CEB0FF"] ,
-                                            order: 2,
-                                            barThickness: 20,
-                                      
-                                        },
-
-                                    ],
-                                }}
- options={{
-                                  maintainAspectRatio: false,
-                                  aspectRatio: 6,
-                                  scales: {
-                                    x: {
-                                      beginAtZero: false,
-                                      grid: {
-                                        display: false,
-                                      },
-                                      ticks: {
-                                        color: "#351c75",
-                                      },
-                                      // axis: {
-                                      //   display: false,
-                                      // },
-                                    },
-                                    y: {
-                                
-                                      beginAtZero: false,
-                                      grid: {
-                                        display: true,
-                                      },
-                                      border: {
-                                        display: false,
-                                      },
-                                      ticks: {
-                                        stepSize: 50000,
-                                        color: "#351c75",
-                                        callback: function (value, index, values) {
-                                          return value >= 1000 ? value / 1000 + "k" : value;
-                                        },
-                                      },
-                                    },
-                                  },
-                                  plugins: {
-                                    legend: {
-                                      display: false,
-                                    },
-                                  },
-                                }}
-                            />
-                        </div>
+              
+              <div className="col bottom-right-bar-chart">
+  <Bar
+    data ={{
+      labels: [
+        "",
+        "",
+        "",
+        "",
+    
+      ],
+      datasets: [
+        {
+          axis: 'y',
+          data: [180000, 190000, 220000, 240000,],
+          backgroundColor: ["#B5DFFE", "#B3FDAD", "#FFE5A1", "#CEB0FF"],
+          order: 2,
+          barThickness: 20,
+        },
+       
+      ],
+    }}
+    options = {{
+      indexAxis: 'y',
+      maintainAspectRatio: false,
+      aspectRatio: 6,
+      scales: {
+        y: {
+          beginAtZero: false,
+          grid: {
+            display: false,
+          },
+          border: {
+            display: false,
+          },
+          ticks: {
+            color: "#351c75",
+          },
+        },
+        x: {
+          beginAtZero: false,
+          grid: {
+            display: true,
+           
+          
+          },
+          ticks: {
+            stepSize: 50000,
+            color: "#351c75",
+            callback: function (value, index, values) {
+              return value >= 1000 ? value / 1000 + "k" : value;
+            },
+          },
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+    }}
+  />
+</div>
                         </div>
                        </div>
           <div className="bottom-right-bar-chart-container">
@@ -427,72 +422,67 @@ function Insight() {
                  Taxes
                 </div>
               </div>
-                        <div className=" col bottom-right-bar-chart">
-                            <Bar
-                            
-                            data ={{
-                              labels: [
-                                "No Category",
-                                "Internal Balance Out",
-                                "Other",
-                                "Rent",
-                                "Taxes"
-                              ],
-                              datasets: [
-                                {
-                                  axis: 'x',
-                                  data: [180000, 190000, 220000, 240000,250004],
-                                  backgroundColor: ["#B5DFFE", "#B3FDAD", "#FFE5A1", "#CEB0FF","#FFC2CD"],
-                                  order: 2,
-                                  barThickness: 20,
-                                },
-                              ],
-                            }}
-                          
-                          options = {{
-                            maintainAspectRatio: false,
-                            aspectRatio: 6,
-                            scales: {
-                          
-                              y: {
-                              
-                                beginAtZero: false,
-                                grid: {
-                                  display: true,
-                                },
-                                border: {
-                                  display: false,
-                                },
-                                ticks: {
-                                  stepSize: 50000,
-                                  color: "#351c75",
-                                  callback: function (value, index, values) {
-                                    return value >= 1000 ? value / 1000 + "k" : value;
-                                  },
-                                },
-                              },
-                              x: {
-                                beginAtZero: false,
-                                grid: {
-                                  display: false,
-                                },
-                                ticks: {
-                                  color: "#351c75",
-                                },
-                                axis: {
-                                  display: false,
-                                },
-                              },
-                            },
-                            plugins: {
-                              legend: {
-                                display: false,
-                              },
-                            },
-                          }}
-                          
-                            />
-                        </div>
+              <div className="col bottom-right-bar-chart">
+  <Bar
+    data ={{
+      labels: [
+        "",
+        "",
+        "",
+        "",
+        "",
+    
+      ],
+      datasets: [
+        {
+          axis: 'y',
+          data: [180000, 190000, 220000, 240000,250004],
+          backgroundColor: ["#B5DFFE", "#B3FDAD", "#FFE5A1", "#CEB0FF","#FFC2CD"],
+          order: 2,
+          barThickness: 20,
+        },
+      ],
+    }}
+    options = {{
+      indexAxis: 'y',
+      maintainAspectRatio: false,
+      aspectRatio: 6,
+      scales: {
+        y: {
+          beginAtZero: false,
+          grid: {
+            display: false,
+          },
+          border: {
+            display:false,
+          },
+          ticks: {
+            color: "#351c75",
+          },
+        },
+        x: {
+          beginAtZero: false,
+          grid: {
+            display: true,
+          },
+          ticks: {
+            stepSize: 50000,
+            color: "#351c75",
+            callback: function (value, index, values) {
+              return value >= 1000 ? value / 1000 + "k" : value;
+            },
+          },
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+    }}
+  />
+</div>
+
                         </div>
                        </div>
            
