@@ -4,6 +4,7 @@ import assets from "../../assets";
 import FormErrorMessage from "../ErrorMessage";
 
 const NormalInput = ({
+  checked,
   type,
   placeholder,
   loginInput,
@@ -48,6 +49,7 @@ const NormalInput = ({
           onClick={onClick}
           onChange={onChange}
           disabled={disabled}
+          checked={checked}
           className={`${checkboxInput ? "checkbox-input" : "input-field"} ${
             hasError ? "input-error" : ""
           } ${inputType === "password" ? "password-input" : ""} ${

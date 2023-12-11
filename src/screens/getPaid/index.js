@@ -8,6 +8,20 @@ import NormalModal from "../../components/NormalModal";
 const GetPaid = () => {
   const [modal, setModal] = useState(false);
   const [automate, setAutomate] = useState(false);
+  const [selectedRow,setSelectedRows]=useState([])
+  function handleGetPayId(id) {
+    const isSelected = selectedRow.includes(id);
+  
+    if (isSelected) {
+      setSelectedRows((prevSelectedRows) => {
+        return prevSelectedRows.filter((selectedId) => selectedId !== id);
+      });
+    } else {
+      setSelectedRows((prevSelectedRows) => [...prevSelectedRows, id]);
+    }
+  }
+  
+
 
   const handle = () => {
     setModal(!modal);
@@ -39,34 +53,34 @@ const GetPaid = () => {
       title: "In process",
     },
     {
-      id: 1,
+      id: 2,
       title: "Scheduled",
     },
     {
-      id: 1,
+      id: 3,
       title: "Received",
     },
   ];
-  const [invoiceData] = useState([
-    {
-      id: 1,
-      invoiceNo: 123456789,
-      recievedDate: "30/09/2023",
-      Amount: `$790.80`,
-    },
-    {
-      id: 2,
-      invoiceNo: 123456789,
-      recievedDate: "30/09/2023",
-      Amount: `$790.80`,
-    },
-    {
-      id: 3,
-      invoiceNo: 123456789,
-      recievedDate: "30/09/2023",
-      Amount: `$790.80`,
-    },
-  ]);
+  // const [invoiceData] = useState([
+  //   {
+  //     id: 1,
+  //     invoiceNo: 123456789,
+  //     recievedDate: "30/09/2023",
+  //     Amount: `$790.80`,
+  //   },
+  //   {
+  //     id: 2,
+  //     invoiceNo: 123456789,
+  //     recievedDate: "30/09/2023",
+  //     Amount: `$790.80`,
+  //   },
+  //   {
+  //     id: 3,
+  //     invoiceNo: 123456789,
+  //     recievedDate: "30/09/2023",
+  //     Amount: `$790.80`,
+  //   },
+  // ]);
   const [payData] = useState([
     {
       id: 1,
@@ -78,7 +92,7 @@ const GetPaid = () => {
       totalAmount: `$790.80`,
     },
     {
-      id: 1,
+      id: 2,
       issueDate: "25/09/2023",
       dueDate: "30/09/2023",
       vendor: "Christoph Scheuer",
@@ -87,7 +101,7 @@ const GetPaid = () => {
       totalAmount: `$790.80`,
     },
     {
-      id: 1,
+      id: 3,
       issueDate: "25/09/2023",
       dueDate: "30/09/2023",
       vendor: "Christoph Scheuer",
@@ -96,7 +110,7 @@ const GetPaid = () => {
       totalAmount: `$790.80`,
     },
     {
-      id: 1,
+      id: 4,
       issueDate: "25/09/2023",
       dueDate: "30/09/2023",
       vendor: "Christoph Scheuer",
@@ -105,7 +119,7 @@ const GetPaid = () => {
       totalAmount: `$790.80`,
     },
     {
-      id: 1,
+      id: 5,
       issueDate: "25/09/2023",
       dueDate: "30/09/2023",
       vendor: "Christoph Scheuer",
@@ -114,7 +128,7 @@ const GetPaid = () => {
       totalAmount: `$790.80`,
     },
     {
-      id: 1,
+      id: 6,
       issueDate: "25/09/2023",
       dueDate: "30/09/2023",
       vendor: "Christoph Scheuer",
@@ -123,7 +137,7 @@ const GetPaid = () => {
       totalAmount: `$790.80`,
     },
     {
-      id: 1,
+      id: 7,
       issueDate: "25/09/2023",
       dueDate: "30/09/2023",
       vendor: "Christoph Scheuer",
@@ -132,7 +146,7 @@ const GetPaid = () => {
       totalAmount: `$790.80`,
     },
     {
-      id: 1,
+      id: 8,
       issueDate: "25/09/2023",
       dueDate: "30/09/2023",
       vendor: "Christoph Scheuer",
@@ -141,7 +155,7 @@ const GetPaid = () => {
       totalAmount: `$790.80`,
     },
     {
-      id: 1,
+      id: 9,
       issueDate: "25/09/2023",
       dueDate: "30/09/2023",
       vendor: "Christoph Scheuer",
@@ -150,7 +164,7 @@ const GetPaid = () => {
       totalAmount: `$790.80`,
     },
     {
-      id: 1,
+      id: 10,
       issueDate: "25/09/2023",
       dueDate: "30/09/2023",
       vendor: "Christoph Scheuer",
@@ -163,13 +177,7 @@ const GetPaid = () => {
     setActiveMenu(menu);
   };
 
-  //   return <>
-  //   {/* <div><button onClick={handle}>view</button></div>
-  //   <NormalModal show={modal}><AutomaticCollectionModal/></NormalModal> */}
 
-  // </>
-
-  // };
   return (
     <div className="getpaid-main-container">
       <div className="getpaid-left-container">
@@ -205,7 +213,7 @@ const GetPaid = () => {
                     <>
                       <tr className="px-3 ">
                         <td>
-                          <NormalInput type={"checkbox"} checkboxInput />
+                          <NormalInput type={"checkbox"} checkboxInput onChange={()=>handleGetPayId(list.id)} checked={selectedRow.includes(list.id)}/>
                         </td>
                         <td>{list.issueDate}</td>
                         <td>{list.dueDate}</td>
@@ -231,19 +239,24 @@ const GetPaid = () => {
         </div>
         <div>
           <NormalTable headerDetails={invoiceDetails}>
-            {invoiceDetails.length > 0
-              ? invoiceData.map((list) => {
-                  return (
-                    <>
-                      <tr key={list.id}>
-                        <td>{list.invoiceNo}</td>
-                        <td>{list.recievedDate}</td>
-                        <td>{list.Amount}</td>
-                      </tr>
-                    </>
-                  );
-                })
-              : "no data"}
+            {selectedRow.length > 0 ? (
+               selectedRow.map((rowId)=>{
+                const finalRow=payData.find((item)=>item.id === rowId)
+                return (
+                  <>
+                    <tr key={finalRow.id}>
+                      <td>{finalRow.invoiceNo}</td>
+                      <td>{finalRow.issueDate}</td>
+                      <td>{finalRow.totalAmount}</td>
+                    </tr>
+                  </>
+                );
+              })
+            )
+           
+          :"nodata"}
+            
+                 
           </NormalTable>
           <hr></hr>
           <div className="para">

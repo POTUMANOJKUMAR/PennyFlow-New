@@ -5,7 +5,7 @@ import NormalSelect from "../../components/NormalSelect";
 import NormalButton from "../../components/NormalButton";
 import NormalTable from "../../components/NormalTable";
 import "./styles.scss";
-import { Icon } from "@mui/material";
+
 function Transaction() {
   const options = [
     {
