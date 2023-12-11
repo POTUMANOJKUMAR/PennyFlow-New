@@ -2,7 +2,7 @@ import React from 'react'
 
 function insight() {
   return (
-    <div>insight</div>
+    <div>insight asimbhai</div>
   )
 }
 
