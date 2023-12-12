@@ -60,7 +60,7 @@ function Insight() {
           <div className="charts-top">
             <div className="insight-bar-chart-container">
               <p className="chart-heading">Money Flows</p>
-              <div className="insight-bar-options d-flex g-2">
+              <div className="insight-up-icons">
                 <div className="option-lable">
                   <img
                     src={assets.Icons.voilet}
@@ -184,7 +184,7 @@ function Insight() {
 
             <div className="insight-line-chart-container">
               <p className="chart-heading">Net Cash Flow</p>
-              <div className="insight-bar-options d-flex">
+              <div className="insight-up-icons">
                 <div className="option-lable">
                   <img
                     src={assets.Icons.voilet}
@@ -275,8 +275,8 @@ function Insight() {
           <div className="bottom-left-bar-chart-container">
                         <p className="chart-heading">Inflow by Category</p>
                         <p className="chart-heading">$143,306.00</p>
-                        <div className="row">
-                        <div className=" col insight-bar-options">
+                        <div className="bottom-icon-chart">
+                        <div className="insight-bottom-icons">
                 <div className="option-lable">
                   <img
                     src={assets.Icons.no_category}
@@ -312,7 +312,7 @@ function Insight() {
             
               </div>
               
-              <div className="col bottom-right-bar-chart">
+              <div className=" bottom-right-bar-chart">
   <Bar
     data ={{
       labels: [
@@ -379,8 +379,8 @@ function Insight() {
           <div className="bottom-right-bar-chart-container">
                         <p className="chart-heading">Outflow by Category</p>
                         <p className="chart-heading">$143,306.00</p>
-                        <div className="row">
-                        <div className=" col insight-bar-options ">
+                        <div className="bottom-icon-chart">
+                        <div className="insight-bottom-icons ">
                 <div className="option-lable">
                   <img
                     src={assets.Icons.no_category}
@@ -422,7 +422,7 @@ function Insight() {
                  Taxes
                 </div>
               </div>
-              <div className="col bottom-right-bar-chart">
+              <div className="bottom-right-bar-chart">
   <Bar
     data ={{
       labels: [

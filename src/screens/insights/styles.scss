@@ -38,7 +38,7 @@ flex: 100%;
     font-weight: 500;
     padding: 0 30px;
     padding-bottom: 10px;
-    font-size: 14px;
+    font-size: 16px;
     color: #c0c0c0;
     cursor: pointer;
   }
@@ -46,25 +46,36 @@ flex: 100%;
     color: $login-blue;
     border-bottom: 1px solid $login-blue;
   }
+  .insight-up-icons{
+    display: flex;
+    flex-direction: row;
+    // margin-bottom: 10px;
+    gap:15px;
+ 
+  
+  }
+  .bottom-icon-chart{
+   display: flex;
+   justify-content: space-between;
+    flex-direction: row ;
+  }
 
-  .insight-bar-options {
-    margin-top:20px;
-    margin-bottom:20px;
-    gap: 30px;
+  .insight-bottom-icons{
+    display: flex;
+    flex-direction: column ;
+    align-items: flex-start;
+    justify-content: space-around;
   }
   .chart-heading {
     font-family: "Poppins";
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     color: #2d3436;
   }
   .insight-main-chart-container{
     display: flex;
     flex-direction: column;
-   
-  
- 
-  }
+   }
   .charts-top{
     margin-top: 15px;
    width: 100%;
@@ -112,5 +123,5 @@ box-shadow: 0px 0px 4px #DFE6E9;
     width: 50%;
     padding: 10px 20px;
     border-radius: 20px;
-box-shadow: 0px 0px 4px #DFE6E9;
+    box-shadow: 0px 0px 4px #DFE6E9;
 }

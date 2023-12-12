@@ -13,14 +13,14 @@
     // border-color: initial;
     padding: 0 10px;
     color: $primary-color;
-    font-size: 12px;
+    font-size: 13px;
 
     &::placeholder {
       font-family: "Poppins";
       font-weight: 400;
       font-size: 12px;
       color: $secondary-color;
-      padding-left: 20px;
+    
     }
   }
   .left-icon-container {

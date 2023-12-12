@@ -14,10 +14,13 @@ const GetPaid = () => {
   
     if (isSelected) {
       setSelectedRows((prevSelectedRows) => {
-        return prevSelectedRows.filter((selectedId) => selectedId !== id);
+         const news=prevSelectedRows.filter((selectedId) => selectedId !== id);
+        console.log("if",selectedRow)
+        return news;
       });
     } else {
       setSelectedRows((prevSelectedRows) => [...prevSelectedRows, id]);
+      console.log("else",selectedRow)
     }
   }
   
@@ -221,7 +224,7 @@ const GetPaid = () => {
                         <td>{list.invoiceNo}</td>
 
                         <td className="text-danger ">{list.daysexceed}</td>
-                        <td className="fw-bold fs-6">{list.totalAmount}</td>
+                        <td className="getpaid-total-amount-row">{list.totalAmount}</td>
                         <td>
                           <a href="">Review</a>
                         </td>
@@ -265,7 +268,7 @@ const GetPaid = () => {
           </div>
           <div className="button-price-container">
             <div className="price-container">
-              <p className="total-amount text-nowrap">Total amount Received</p>
+              <p className="total-amount">Total amount Received</p>
               <p className="total-price">$1628.40</p>
             </div>
             <div className="button-container">
@@ -288,28 +291,28 @@ const GetPaid = () => {
                   Successfully!
                 </p>
               </div>
-              <div className="edit-btn">
+              <div className="automatic-collection-popup-edit-btn">
                 <NormalButton label="Edit" notifyBtn />
               </div>
             </div>
             <div className="getpaid-details">
               <div>
-                <p className="margin">Notification Before Due Date</p>
+                <p className="getpaid-notification-header">Notification Before Due Date</p>
               </div>
-              <div className="blue">
-                <img src={assets.Icons.at} alt=""></img>
+              <div className="automatic-collection-icon-color">
+                <img   className="automatic-collection-icons" src={assets.Icons.at} alt=""></img>
                 <label>Email Automatic</label>
               </div>
-              <div>
+              <div className="getpaid-labels">
                 <label>Trigger:</label>
-                <span> Due Date-2days</span>
+               Due Date-2days
               </div>
-              <div>
-                <label>Trigger: </label>{" "}
-                <span> Notification Before Due Date</span>
+              <div  className="getpaid-labels">
+                <label>Trigger: </label>
+              Notification Before Due Date
               </div>
               <div className="Todo">
-                <div>
+                <div  >
                   <label>Recipient:</label>
                 </div>
                 <div className="col-8">
@@ -320,7 +323,7 @@ const GetPaid = () => {
                     placeholder="Enter Recipient Email/Mobile number "
                   />
                 </div>
-                <div className="notify">
+                <div className="automatic-collection-popup-add-btn">
                   <NormalButton label="ADD" notifyBtn />
                 </div>
               </div>
@@ -332,36 +335,36 @@ const GetPaid = () => {
             </div>
             <div className="getpaid-details">
               <div>
-                <p className="margin">Call Remainder</p>
+                <p className="getpaid-notification-header">Call Remainder</p>
               </div>
-              <div className="blue">
-                <img src={assets.Icons.call} alt=""></img>
+              <div className="automatic-collection-icon-color">
+                <img   className="automatic-collection-icons"src={assets.Icons.call} alt=""></img>
                 <label className="label">Call</label>
               </div>
-              <div>
-                <label>Trigger:</label>
-                <span>Due Date + 5 days</span>
+              <div className="getpaid-labels">
+                <label >Trigger:</label>
+                Due Date + 5 days
               </div>
             </div>
             <div className="getpaid-details">
               <div>
-                <p className="margin">Follow Up 1-Physical Letter</p>
+                <p className="getpaid-notification-header">Follow Up 1-Physical Letter</p>
               </div>
-              <div className="blue">
-                <img src={assets.Icons.letter} alt=""></img>
+              <div className="automatic-collection-icon-color">
+                <img   className="automatic-collection-icons" src={assets.Icons.letter} alt=""></img>
                 <label className="label">Letter</label>
               </div>
-              <div>
+              <div className="getpaid-labels">
                 <label>Trigger:</label>
-                <span>Due Date + 20 days</span>
+                Due Date + 20 days
               </div>
             </div>
 
-            <div className="buttons">
-              <div className="Cancel">
+            <div className="automatic-collection-buttons">
+              <div className="automatic-collection-popup-cancel-btn">
                 <NormalButton label="Cancel" cancelBtn />
               </div>
-              <div className="send">
+              <div className="automatic-collection-popup-send-btn">
                 <NormalButton label="Send" approveBtn />
               </div>
             </div>

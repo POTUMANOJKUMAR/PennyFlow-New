@@ -8,7 +8,7 @@ import NormalButton from "../../components/NormalButton";
 import DashCard from "../../components/dashboardCard";
 import NormalSelect from "../../components/NormalSelect";
 import DatePicker from "../../components/DatePicker";
-import { Bar, Doughnut, Line } from "react-chartjs-2";
+import { Bar, Doughnut } from "react-chartjs-2";
 
 const Dashboard = () => {
   const [activeMenu, setActiveMenu] = useState("All");

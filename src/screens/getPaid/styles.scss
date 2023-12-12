@@ -29,7 +29,7 @@
   font-weight: 500;
   padding: 0 30px;
   padding-bottom: 10px;
-  font-size: 14px;
+  font-size: 16px;
   color: #c0c0c0;
   cursor: pointer;
 }
@@ -45,6 +45,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.getpaid-total-amount-row{
+font-size: 14px  !important;
+font-weight: 700 !important;
 }
 .filter-icon {
   width: 18px;
@@ -63,6 +67,12 @@
   font-family: "Poppins";
   font-weight: 600;
 }
+.main-table .normal-table-header th {
+
+  font-size: 14px ;
+  font-weight: 400 ;
+
+}
 
 hr {
   margin: 25px 10px;
@@ -71,10 +81,12 @@ hr {
   .para-first {
     font-size: 16px;
     color: #878787;
+    font-weight:600;
     font-family: "Poppins";
   }
   .para-second {
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 400;
     color: #848484;
     font-family: "Poppins";
   }
@@ -87,13 +99,13 @@ hr {
 
   .price-container {
     .total-amount {
-      font-size: 14px;
+      font-size: 16px;
       color: #878787;
       font-family: "Poppins";
     }
     .total-price {
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 28px;
+      font-weight: 600;
       font-family: "Poppins";
     }
   }
@@ -115,8 +127,8 @@ hr {
   justify-content: space-between;
 
   p {
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 600;
   }
 }
 .Todo {
@@ -136,12 +148,10 @@ hr {
   border: 1px solid $border-color;
 
   padding: 20px;
-  p {
-    font-size: 20px;
-    font-weight: bold;
-  }
+
 }
-.blue {
+.automatic-collection-icon-color{
+
   color: $login-blue;
   background-color: #e2eafd;
   border-radius: 5px;
@@ -151,49 +161,49 @@ hr {
     margin-right: 5px;
   }
   label {
-    font-weight: bold;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 11px;
   }
 }
-label {
-  font-weight: 100;
-}
-span {
-  font-weight: bold;
+.getpaid-labels {
+  font-weight: 600;
   font-size: 12px;
 }
+
 .pop {
   display: flex;
   flex-direction: column;
-
   gap: 10px;
 }
-img {
+.automatic-collection-icons {
   color: $gray-sideBar;
   margin-right: 5px;
 }
 .label {
   color: gray;
 }
-.buttons {
+.automatic-collection-buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 10px;
 }
-.margin {
+.getpaid-notification-header {
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 0px;
+
 }
-.notify {
+.automatic-collection-popup-add-btn {
   width: 120px;
 }
-.edit-btn {
+.automatic-collection-popup-edit-btn {
   width: 120px;
 }
-.send {
+.automatic-collection-popup-send-btn {
   width: 170px;
 }
-.Cancel {
+.automatic-collection-popup-cancel-btn {
   width: 145px;
 }

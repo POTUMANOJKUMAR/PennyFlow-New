@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import "./styles.scss"
 import NormalInput from '../../components/inputField'
 import NormalButton from '../../components/NormalButton'
@@ -79,13 +79,13 @@ function CreateInvoice() {
         
 
     </div>
-    <div>OR</div>
+    <div className='create-invoice-or-para'>OR</div>
     <div className='upload-invoice'>
 <div className='row'>
     <label>Upload Invoice PDF</label>
     <input type="file" id="upload" hidden/>
 <label className='create-invoice-upload-btn' for="upload">Upload</label> 
-    <p className='file'>*Upload file size of max 2mb</p> 
+    <p className='create-invoice-file-note'>*Upload file size of max 2mb</p> 
 </div>
 </div>
 <div className='create-invoice-save-cancel-btns'>
