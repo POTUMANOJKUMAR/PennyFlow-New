@@ -118,15 +118,12 @@ function Forecast() {
       <button onClick={handle}>popup</button>
       <NormalModal show={show} foreCastTitle header={"CASH FLOW "} showIcon>
         <div className="forecast-pie-chart-container">
-          {/* <div className='heading'>
-            Cash Flow Forecast Details
-         </div> */}
-          {/* <div><hr></hr></div> */}
-          <div className="top">
+     
+          <div className="forecast-main-chart-container">
             {pieChartData.map((list) => (
-              <div className="container" key={list.id}>
+              <div className="forcast-chart-container" key={list.id}>
                 <div>
-                  <p className="font">{list.name}</p>
+                  <p className="chart-name">{list.name}</p>
                 </div>
 
                 <div className="pie-chart-and-percentage">
@@ -136,32 +133,34 @@ function Forecast() {
                       options={list.chartOptions}
                     />
                   </div>
-                  <div className="fw-bold">{list.percentage}</div>
+                  <div className="chart-percentage">{list.percentage}</div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="row col-12">
-            <div className="col-4">
-              <div className="mt-5 font">Net Runway</div>
-              <div className="fw-bold fs-5 mt-2 mb-2">24 Months</div>
+          <div className="forecast-popup-values">
+            <div className="">
+              <div className="forecast-header-values">Net Runway</div>
+              <div className="forecast-header-values1">24 Months</div>
             </div>
-            <div className="col-4">
-              <div className="mt-5 font">Burn Rate</div>
-              <div className="fw-bold fs-5 mt-2 mb-2">$750,000.00</div>
+            <div className="">
+              <div className="forecast-header-values">Burn Rate</div>
+              <div className="forecast-header-values1">$750,000.00</div>
             </div>
-            <div className="col-4">
-              <div className="mt-5 font">Investments</div>
-              <div className="fw-bold fs-5 mt-2 mb-2">$150,000.00</div>
+            <div className="">
+              <div className="forecast-header-values">Investments</div>
+              <div className="forecast-header-values1">$150,000.00</div>
             </div>
-            <div className="col-4">
-              <div className="mt-3 font">Monthly Cash Needs</div>
-              <div className="fw-bold fs-5 mt-2 mb-5 ">$15,000.00</div>
             </div>
-            <div className="col-4">
-              <div className="mt-3 font">Yearly Cash Needs</div>
-              <div className="fw-bold fs-5 mt-2 mb-5">$120,000.00</div>
+            <div className="forecast-popup-values1">
+            <div className="">
+              <div className="forecast-header-values">Monthly Cash Needs</div>
+              <div className="forecast-header-values1">$15,000.00</div>
+            </div>
+            <div className="">
+              <div className="forecast-header-values">Yearly Cash Needs</div>
+              <div className="forecast-header-values1">$120,000.00</div>
             </div>
           </div>
         </div>
