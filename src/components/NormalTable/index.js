@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.scss";
 import assets from "../../assets";
 
-const NormalTable = ({ headerDetails, children, subscriptionTable }) => {
+const NormalTable = ({ headerDetails, children, subscriptionTable,fontLarge }) => {
   return (
     <div className="table-container">
       <table className="main-table">
@@ -15,7 +15,7 @@ const NormalTable = ({ headerDetails, children, subscriptionTable }) => {
         >
           <tr>
             {headerDetails.map((header, index) => (
-              <th key={index}>
+              <th key={index} className={`${fontLarge ? "custom-table-header" :"th"}`}>
                 {header.bank && (
                   <img
                     src={assets.Icons.hdfc}

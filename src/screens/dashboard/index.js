@@ -17,6 +17,22 @@ const Dashboard = () => {
     { label: "Month", value: 2 },
     { label: "Week", value: 3 },
   ];
+  const textCenterDown = {
+    id: 'textCenterDown',
+    beforeDatasetsDraw(chart) {
+      const { ctx } = chart;
+      let Total = '53%'; 
+  
+      ctx.save();
+      ctx.font = '400 16px Poppins';
+      ctx.fillStyle = '#373D3F';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      let textHeight = ctx.measureText(Total).actualBoundingBoxAscent + ctx.measureText(Total).actualBoundingBoxDescent;
+      ctx.fillText(Total, chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);
+      ctx.restore();
+    }
+  }
   const menus = [
     {
       id: 1,
@@ -131,6 +147,7 @@ const Dashboard = () => {
             color: "rgba(0, 0, 0, 0)",
           },
         },
+        
         cutout: 60,
       },
     },
@@ -279,12 +296,40 @@ const Dashboard = () => {
                 totalAmount={data.totalAmount}
                 data={data.chartData}
                 options={data.chartOptions}
+               plugins={[textCenterDown]}
               />
             </div>
           ))}
         </div>
         <div className="main-chart-container">
           <p className="cash-flow">Cash Flow</p>
+          <div className="dashboard-bar-chart-icons">
+                <div className="option-lable">
+                  <img
+                    src={assets.Icons.voilet}
+                    alt="optionIcon"
+                    className="option-icon"
+                  />{" "}
+                  $150,500.00
+                </div>
+
+                <div className="option-lable">
+                  <img
+                    src={assets.Icons.aqua}
+                    alt="optionIcon"
+                    className="option-icon"
+                  />{" "}
+                  $188,000.00
+                </div>
+                <div className="option-lable">
+                  <img
+                    src={assets.Icons.lightpink}
+                    alt="optionIcon"
+                    className="option-icon"
+                  />{" "}
+                  $143,306.15
+                </div>
+              </div>
           <div className="mixed-chart-container">
             <Bar
               data={{
@@ -389,6 +434,7 @@ const Dashboard = () => {
                 <Doughnut
                   data={list.chartData}
                   options={list.chartOptions}
+                
                   width="116px"
                   // className="me-5"
                   height="116px"

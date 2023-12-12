@@ -217,4 +217,14 @@
   margin-top: 15px;
   display: flex;
   justify-content: space-around;
+
+}
+.dashboard-bar-chart-icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap:10px;
+  margin-bottom: 10px;
 }

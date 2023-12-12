@@ -53,7 +53,7 @@ const NormalInput = ({
           className={`${checkboxInput ? "checkbox-input" : "input-field"} ${
             hasError ? "input-error" : ""
           } ${inputType === "password" ? "password-input" : ""} ${
-            freeze ? "freeze" : ""
+            freeze ? "freeze" : searchIcon? "searchIconInput":""
           }`}
           placeholder={placeholder}
         />

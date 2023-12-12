@@ -209,31 +209,34 @@ const GetPaid = () => {
           </div>
         </div>
         <div className="mt-4">
-          <NormalTable headerDetails={headerDetails} check>
-            {payData.length > 0
-              ? payData.map((list) => {
-                  return (
-                    <>
-                      <tr className="px-3 ">
-                        <td>
-                          <NormalInput type={"checkbox"} checkboxInput onChange={()=>handleGetPayId(list.id)} checked={selectedRow.includes(list.id)}/>
-                        </td>
-                        <td>{list.issueDate}</td>
-                        <td>{list.dueDate}</td>
-                        <td>{list.vendor}</td>
-                        <td>{list.invoiceNo}</td>
-
-                        <td className="text-danger ">{list.daysexceed}</td>
-                        <td className="getpaid-total-amount-row">{list.totalAmount}</td>
-                        <td>
-                          <a href="">Review</a>
-                        </td>
-                      </tr>
-                    </>
-                  );
-                })
-              : "No Data"}
-          </NormalTable>
+         
+              <NormalTable headerDetails={headerDetails} check>
+              {payData.length > 0
+                ? payData.map((list) => {
+                    return (
+                      <>
+                        <tr className="px-3 ">
+                          <td>
+                            <NormalInput type={"checkbox"} checkboxInput onChange={()=>handleGetPayId(list.id)} checked={selectedRow.includes(list.id)}/>
+                          </td>
+                          <td>{list.issueDate}</td>
+                          <td>{list.dueDate}</td>
+                          <td>{list.vendor}</td>
+                          <td>{list.invoiceNo}</td>
+  
+                          <td className="text-danger ">{list.daysexceed}</td>
+                          <td className="getpaid-total-amount-row">{list.totalAmount}</td>
+                          <td>
+                            <a href="">Review</a>
+                          </td>
+                        </tr>
+                      </>
+                    );
+                  })
+                : "No Data"}
+            </NormalTable>
+       
+        
         </div>
       </div>
       <div className="getpaid-right-container">
@@ -241,7 +244,7 @@ const GetPaid = () => {
           <p className="invoice-details-header"> Invoice Details</p>
         </div>
         <div>
-          <NormalTable headerDetails={invoiceDetails}>
+          {selectedRow.length>0?  ( <NormalTable fontLarge headerDetails={invoiceDetails}>
             {selectedRow.length > 0 ? (
                selectedRow.map((rowId)=>{
                 const finalRow=payData.find((item)=>item.id === rowId)
@@ -257,10 +260,11 @@ const GetPaid = () => {
               })
             )
            
-          :"nodata"}
+          :""}
             
                  
-          </NormalTable>
+          </NormalTable>):""}
+         
           <hr></hr>
           <div className="para">
             <p className="para-first">Selected Invoice Details</p>

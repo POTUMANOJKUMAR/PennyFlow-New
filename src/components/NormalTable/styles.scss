@@ -35,7 +35,7 @@
     // background-color: $secondary-color;
     color: #848484;
 
-    th {
+    .th {
       // padding: 12px 0px;
       text-align: center;
       font-size: 12px;
@@ -43,6 +43,14 @@
       color: #848484;
       font-family: "Poppins";
  
+    }
+    .custom-table-header{
+        // padding: 12px 0px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: #848484;
+        font-family: "Poppins";
     }
     .sort-icon {
       width: 12px;

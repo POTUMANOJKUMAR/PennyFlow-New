@@ -45,7 +45,7 @@ function Integration() {
         </div>
         <hr className="underline"></hr>
         <div  className="integration-table-container">
-          <NormalTable headerDetails={integrationHeader}>
+          <NormalTable fontLarge headerDetails={integrationHeader}>
       
             {integrationtableRows.length > 0
               ? integrationtableRows.map((list) => {

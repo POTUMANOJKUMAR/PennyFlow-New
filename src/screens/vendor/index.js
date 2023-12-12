@@ -85,7 +85,7 @@ function Integration() {
         </div>
         <hr className="underline"></hr>
         <div className="vendor-table-container">
-          <NormalTable headerDetails={vendorHeader}>
+          <NormalTable fontLarge headerDetails={vendorHeader}>
             {vendortableRows.length > 0
               ? vendortableRows.map((list) => {
                   return (

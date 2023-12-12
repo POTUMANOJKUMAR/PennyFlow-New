@@ -134,7 +134,7 @@ function Transaction() {
       <div className="transaction-history-header-container row col-12 ">
         <div className="transaction-history-header1-left  row col ">
           <div className="col-9">
-            <NormalInput type="text" placeholder="Search" />
+            <NormalInput  searchIcon type="text" placeholder="Search" />
           </div>
           <div className="col-1">
             <img

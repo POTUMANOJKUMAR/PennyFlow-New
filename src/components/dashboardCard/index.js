@@ -25,7 +25,7 @@ ChartJS.register(
   Legend
 );
 
-const DashCard = ({ icon, title, amount, totalAmount }) => {
+const DashCard = ({ icon, title, amount, totalAmount ,plugins}) => {
   let ChartComponent = Doughnut;
   const percentage = (amount / totalAmount) * 100;
 
@@ -45,6 +45,7 @@ const DashCard = ({ icon, title, amount, totalAmount }) => {
       },
     ],
   };
+
   const options = {
     plugins: {
       legend: {
@@ -84,6 +85,7 @@ const DashCard = ({ icon, title, amount, totalAmount }) => {
         <ChartComponent
           data={data}
           options={options}
+          plugins={plugins}
           width="116px"
           height="116px"
         />

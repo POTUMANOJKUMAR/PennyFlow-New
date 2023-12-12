@@ -12,12 +12,34 @@ const Header = () => {
   const[show,setShow]=useState(false)
 const handle=()=>{
 setShow(!show)
-console.log(show,"show")
+
 }
-const pophandleclick=()=>{
+const profilehandleClick=()=>{
   setShow(!show)
   navigate("/main/profile")
 }
+const integrationhandleClick=()=>{
+  setShow(!show)
+  navigate("/main/integration")
+}
+const networksHandleClick=()=>{
+  setShow(!show)
+  navigate("/main/networking")
+}
+const accountsHandleClick=()=>{
+  setShow(!show)
+  navigate("/main/profile")
+}
+const vendorHandleClick=()=>{
+  setShow(!show)
+  navigate("/main/vendor")
+}
+const remainderHandleClick=()=>{
+  setShow(!show)
+  navigate("/main/notification")
+}
+
+
 
   const location = useLocation();
   const pathArray = location.pathname.split("/");
@@ -108,12 +130,12 @@ const pophandleclick=()=>{
       </div>
       <NormalModal show={show} customModalClass="profilepop" >
         <div className='profile-pop-values'>
-    <div className='cursor-pointer' onClick={pophandleclick}>Profile</div>
-    <div className='cursor-pointer'>Integrations</div>
-    <div className='cursor-pointer'>Networks</div>
-    <div className='cursor-pointer'>Accounts</div>
-    <div className='cursor-pointer'>Vendors</div>
-    <div className='cursor-pointer'>Reminder Setting</div>
+    <div className='cursor-pointer' onClick={profilehandleClick}>Profile</div>
+    <div className='cursor-pointer' onClick={integrationhandleClick}>Integrations</div>
+    <div className='cursor-pointer'onClick={networksHandleClick}>Networks</div>
+    <div className='cursor-pointer' onClick={accountsHandleClick}>Accounts</div>
+    <div className='cursor-pointer' onClick={vendorHandleClick}>Vendors</div>
+    <div className='cursor-pointer' onClick={remainderHandleClick}>Reminder Setting</div>
     <div className='cursor-pointer'>Logout</div>
     
 
