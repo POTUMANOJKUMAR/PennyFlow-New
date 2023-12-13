@@ -2,6 +2,10 @@ import React from "react";
 import NormalModal from "../../components/NormalModal";
 import { useState } from "react";
 import "./styles.scss";
+
+
+
+
 import assets from "../../assets";
 import { Doughnut } from "react-chartjs-2";
 import NormalInput from "../../components/inputField";
@@ -9,6 +13,8 @@ import NormalButton from "../../components/NormalButton";
 import NormalSelect from "../../components/NormalSelect";
 
 function Forecast() {
+
+  
   const [show, setShow] = useState(false);
   const options = [
     { label: "Revenue" },
@@ -121,6 +127,7 @@ function Forecast() {
              
                 <div className="forecast-popup-header-container">
                 <p>Cash Flow Forecast Details</p>
+               
                <img src={assets.Icons.close_btn} alt="close-btn" onClick={()=>setShow(!show)}/>
                 </div>
              

@@ -36,6 +36,8 @@ function Integration() {
   return (
     <div className="networking-data-main-container">
       <ProfileHeader />
+    
+     
       <div className="networking-container">
         <div className="networking-data-header">
           <div className="networking-header">Networks</div>

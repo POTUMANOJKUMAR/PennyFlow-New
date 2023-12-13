@@ -220,7 +220,7 @@ const[total,settotal]=useState([])
             <NormalButton label="+ Add Invoice" addBtn />
           </div>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 getpaid-table-div">
          
               <NormalTable headerDetails={headerDetails} check>
               {payData.length > 0
