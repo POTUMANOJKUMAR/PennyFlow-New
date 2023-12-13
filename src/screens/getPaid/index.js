@@ -6,25 +6,37 @@ import NormalTable from "../../components/NormalTable";
 import NormalInput from "../../components/inputField";
 import NormalModal from "../../components/NormalModal";
 const GetPaid = () => {
+const[total,settotal]=useState([])
   const [modal, setModal] = useState(false);
+
   const [automate, setAutomate] = useState(false);
   const [selectedRow,setSelectedRows]=useState([])
-  function handleGetPayId(id) {
+  function handleGetPayId(id,totalAmount) {
     const isSelected = selectedRow.includes(id);
   
     if (isSelected) {
       setSelectedRows((prevSelectedRows) => {
-         const news=prevSelectedRows.filter((selectedId) => selectedId !== id);
-        console.log("if",selectedRow)
-        return news;
+          return prevSelectedRows.filter((selectedId) => selectedId !== id);
+      
+      
       });
+      settotal((prevTotal) => {
+        const newtotal=prevTotal-totalAmount
+        settotal(Math.round(newtotal))
+        return newtotal
+      })
+     
     } else {
       setSelectedRows((prevSelectedRows) => [...prevSelectedRows, id]);
-      console.log("else",selectedRow)
-    }
-  }
+      settotal((prevTotal) => {
+        const newtotal=prevTotal+totalAmount
+        settotal(Math.round(newtotal))
+        return newtotal
+    })
+   
+  }}
   
-
+ 
 
   const handle = () => {
     setModal(!modal);
@@ -64,7 +76,7 @@ const GetPaid = () => {
       title: "Received",
     },
   ];
-  // const [invoiceData] = useState([
+
   //   {
   //     id: 1,
   //     invoiceNo: 123456789,
@@ -92,7 +104,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount: 790.80,
     },
     {
       id: 2,
@@ -101,7 +113,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount: 790.8,
     },
     {
       id: 3,
@@ -110,7 +122,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount:790.80,
     },
     {
       id: 4,
@@ -119,7 +131,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount: 790.80,
     },
     {
       id: 5,
@@ -128,7 +140,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount: 790.80,
     },
     {
       id: 6,
@@ -137,7 +149,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount: 790.80,
     },
     {
       id: 7,
@@ -146,7 +158,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount: 790.80,
     },
     {
       id: 8,
@@ -155,7 +167,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount: 790.80,
     },
     {
       id: 9,
@@ -164,7 +176,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount: 790.80,
     },
     {
       id: 10,
@@ -173,7 +185,7 @@ const GetPaid = () => {
       vendor: "Christoph Scheuer",
       invoiceNo: 123456789,
       daysexceed: 42,
-      totalAmount: `$790.80`,
+      totalAmount: 790.80,
     },
   ]);
   const handleMenuClick = (menu) => {
@@ -217,7 +229,7 @@ const GetPaid = () => {
                       <>
                         <tr className="px-3 ">
                           <td>
-                            <NormalInput type={"checkbox"} checkboxInput onChange={()=>handleGetPayId(list.id)} checked={selectedRow.includes(list.id)}/>
+                            <NormalInput type={"checkbox"} checkboxInput onChange={()=>handleGetPayId(list.id,list.totalAmount)} checked={selectedRow.includes(list.id)}/>
                           </td>
                           <td>{list.issueDate}</td>
                           <td>{list.dueDate}</td>
@@ -233,7 +245,7 @@ const GetPaid = () => {
                       </>
                     );
                   })
-                : "No Data"}
+                : ""}
             </NormalTable>
        
         
@@ -247,7 +259,12 @@ const GetPaid = () => {
           {selectedRow.length>0?  ( <NormalTable fontLarge headerDetails={invoiceDetails}>
             {selectedRow.length > 0 ? (
                selectedRow.map((rowId)=>{
-                const finalRow=payData.find((item)=>item.id === rowId)
+
+              const finalRow=payData.find((item)=>item.id === rowId)
+              
+               
+              
+               
                 return (
                   <>
                     <tr key={finalRow.id}>
@@ -273,7 +290,7 @@ const GetPaid = () => {
           <div className="button-price-container">
             <div className="price-container">
               <p className="total-amount">Total amount Received</p>
-              <p className="total-price">$1628.40</p>
+              <p className="total-price">{`$${total}`}</p>
             </div>
             <div className="button-container">
               <NormalButton

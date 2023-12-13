@@ -114,11 +114,18 @@ function Forecast() {
   }
   return (
     <>
-      {" "}
+    
       <button onClick={handle}>popup</button>
-      <NormalModal show={show} foreCastTitle header={"CASH FLOW "} showIcon>
+      <NormalModal show={show}>
         <div className="forecast-pie-chart-container">
-     
+             
+                <div className="forecast-popup-header-container">
+                <p>Cash Flow Forecast Details</p>
+               <img src={assets.Icons.close_btn} alt="close-btn" onClick={()=>setShow(!show)}/>
+                </div>
+             
+            
+              <hr></hr>
           <div className="forecast-main-chart-container">
             {pieChartData.map((list) => (
               <div className="forcast-chart-container" key={list.id}>

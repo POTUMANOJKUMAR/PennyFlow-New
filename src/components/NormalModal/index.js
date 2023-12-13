@@ -10,8 +10,8 @@ const NormalModal = ({
   setModal,
   header,
   hideIcon,
-  foreCastTitle,
-  showIcon,
+
+  
 }) => {
   const toggle = () => {
     setModal(!show);
@@ -27,13 +27,7 @@ const NormalModal = ({
       centered
       className={`normalModal ${customModalClass}`}
     >
-      {showIcon && (
-        <Modal.Header closeButton>
-          <div className="popup-heading-and-closebutton">
-            {foreCastTitle ? <span>Cash Flow Forecast Details</span> : ""}
-          </div>
-        </Modal.Header>
-      )}
+      
       {/* {hideIcon ? (
     <Modal.Header>
      

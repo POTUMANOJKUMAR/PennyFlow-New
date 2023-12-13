@@ -55,7 +55,7 @@ const Icons = {
   bin: require("./icons/bin.png"),
   close: require("./icons/close.png"),
   dollarBig: require("./icons/$.png"),
-  leftArrow: require("./icons/leftArrow.png"),
+  leftArrow: require("./icons/leftArrow (2).png"),
   downArrow: require("./icons/downArrow.png"),
   emailPf:require("./icons/emailPf.png"),
   chatcircle:require("./icons/chatmodal/circle.png"),
@@ -66,7 +66,10 @@ const Icons = {
   foodIcon:require("./icons/budgeting/foodcolor.png"),
 
   rentIcon:require("./icons/budgeting/rentcolor.png"),
-
+  upArrow:require('./icons/upArrow.png'), 
+   revenueIcon:require("./icons/revenuesIcon.png"),
+  interestIcon:require("./icons/interestIncome.png"),
+  donationIcon:require("./icons/donations.png"),
   otherIcon:require("./icons/budgeting/othercolor.png"),
   voilet:require("./icons/violet.png"),
   lightpink:require("./icons/lightpink.png"),
@@ -76,6 +79,7 @@ const Icons = {
   internatiinal_bal:require("./icons/internal-balance.png"),
   other:require("./icons/other.png"),
   no_category:require("./icons/no-category.png"),
+  close_btn:require("./icons/carbon_close.png"),
 };
 
 const Lottie = {};

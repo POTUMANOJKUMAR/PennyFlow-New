@@ -26,7 +26,7 @@
     }
   }
   hr {
-    background-color: #cdcdcd;
+    background-color:#E6E6E6;
   }
   .mainForm {
     form {
@@ -49,6 +49,22 @@
 }
 
 //forecast popup css styles
+
+.forecast-popup-header-container{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+img{
+  width: 35px;
+  height: 35px;
+}
+p{
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+  }
 .forecast-pie-chart-container {
   display: flex;
 flex-direction: column;
