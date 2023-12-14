@@ -45,11 +45,11 @@ const routes = [
       },
       {
         screen: "ProfileData",
-        childPath: "/profile",
+        childPath: "/profile/",
       },
       {
         screen: "integration",
-        childPath: "/integration",
+        childPath: "/integration/",
       },
       {
         screen: "networking",

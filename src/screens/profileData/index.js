@@ -5,7 +5,9 @@ import NormalInput from "../../components/inputField";
 import NormalButton from "../../components/NormalButton";
 import Profile from "../profileHeader";
 
+
 function ProfileData() {
+
   return (
     <>
     
@@ -40,7 +42,7 @@ function ProfileData() {
             </div>
             <div className="w-100">
               <div className="profile-form-data">Mobile Number</div>
-              <div className="values" >+91 98968 65489 <span><img src={assets.Icons.editBtn}/></span></div>
+              <div className="values" >+91 98968 65489 <span><img  alt="" src={assets.Icons.editBtn}/></span></div>
               
             </div>
           </div>
@@ -68,7 +70,7 @@ function ProfileData() {
             </div>   
       
             </div>
-            <div className="profile-update-btn col d-flex justify-content-center w-100"><NormalButton label="Update" approveBtn/></div>
+            <div className="profile-update-btn  "><NormalButton label="Update" approveBtn/></div>
 
         </div>
       </div>

@@ -1,19 +1,24 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./styles.scss";
-import { useLocation, useNavigate } from "react-router-dom";
+import {useNavigate}  from "react-router-dom";
 
 function ProfileHeader() {
-  const [activeMenu, setActiveMenu] = useState("Profile");
-  const menus = [
+ 
+  const [activeMenu, setActiveMenu] = useState()
+  useEffect(()=>{
+   
+    setActiveMenu(sessionStorage.getItem("activeMenu"))
+  },[])
+  const menus=[
     {
       id: 1,
       title: "Profile",
-      link: "/main/profile",
+      link: `/main/profile/`,
     },
     {
       id: 2,
       title: "Integrations",
-      link: "/main/integration",
+      link: "/main/integration/",
     },
     {
       id: 3,
@@ -37,10 +42,10 @@ function ProfileHeader() {
     },
   ];
   function handleMenuClick(title, link) {
-    setActiveMenu(title);
     navigate(link);
+    setActiveMenu(title);
+    sessionStorage.setItem("activeMenu",title)
   }
-  let location = useLocation();
   let navigate = useNavigate();
   return (
     <div className="profile-menu-container">

@@ -14,30 +14,48 @@ const handle=()=>{
 setShow(!show)
 
 }
-const profilehandleClick=()=>{
-  setShow(!show)
-  navigate("/main/profile")
-}
-const integrationhandleClick=()=>{
-  setShow(!show)
-  navigate("/main/integration")
-}
-const networksHandleClick=()=>{
-  setShow(!show)
-  navigate("/main/networking")
-}
-const accountsHandleClick=()=>{
-  setShow(!show)
-  navigate("/main/profile")
-}
-const vendorHandleClick=()=>{
-  setShow(!show)
-  navigate("/main/vendor")
-}
-const remainderHandleClick=()=>{
-  setShow(!show)
-  navigate("/main/notification")
-}
+
+
+  const menus=[
+    {
+      id: 1,
+      title: "Profile",
+      link: `/main/profile/`,
+    },
+    {
+      id: 2,
+      title: "Integrations",
+      link: "/main/integration/",
+    },
+    {
+      id: 3,
+      title: "Networks",
+      link: "/main/networking",
+    },
+    {
+      id: 4,
+      title: "Accounts",
+      link: "/main/profile",
+    },
+    {
+      id: 5,
+      title: "Vendors",
+      link: "/main/vendor",
+    },
+    {
+      id: 6,
+      title: "Reminder Setting",
+      link: "/main/notification",
+    },
+  ];
+  
+  function handleclick(link,title){
+    setShow(!show)
+
+    navigate(link)
+    sessionStorage.setItem("activeMenu",title)
+  
+  }
 
 
 
@@ -130,13 +148,12 @@ const remainderHandleClick=()=>{
       </div>
       <NormalModal show={show} customModalClass="profilepop" >
         <div className='profile-pop-values'>
-    <div className='cursor-pointer' onClick={profilehandleClick}>Profile</div>
-    <div className='cursor-pointer' onClick={integrationhandleClick}>Integrations</div>
-    <div className='cursor-pointer'onClick={networksHandleClick}>Networks</div>
-    <div className='cursor-pointer' onClick={accountsHandleClick}>Accounts</div>
-    <div className='cursor-pointer' onClick={vendorHandleClick}>Vendors</div>
-    <div className='cursor-pointer' onClick={remainderHandleClick}>Reminder Setting</div>
-    <div className='cursor-pointer'>Logout</div>
+   {
+    menus.map((item)=>{
+      return( <div onClick={()=>handleclick(item.link,item.title)} className="cursor-pointer">{item.title}</div>)
+     
+    })
+   }
     
 
   </div></NormalModal>

@@ -4,7 +4,9 @@ import "./styles.scss";
 import NormalButton from "../../components/NormalButton";
 import assets from "../../assets";
 import NormalTable from "../../components/NormalTable";
+
 function Integration() {
+ 
   const integrationHeader = [
     { label: "Integrated Accounts" },
     { label: "Account ID" },
@@ -35,7 +37,7 @@ function Integration() {
 
   return (
     <div className="integration-data-main-container">
-      <ProfileHeader />
+      <ProfileHeader  />
       <div className="integration-container">
         <div className="integration-data-header">
           <div className="integration-header">Integrations</div>
